@@ -1,0 +1,55 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar-nav {
+    position: relative;
+    left: -25px; /* shift the whole group, not each item */
+}
+
+.navbar-nav .nav-item {
+    padding: 0 22px; /* horizontal padding between items */
+
+}
+
+
+.navbar-nav .nav-link {
+    padding-top: 12px; /* vertical padding */
+    padding-bottom: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px; /* optional: adjust size */
+    font-weight: semibold; /* optional: make bold */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+    color: #8B0000 !important; /* accent color on hover */
+}
+
+.navbar-nav .nav-link {
+    transition: transform 0.15s ease-in-out; /* smooth scaling */
+}
+
+.navbar-nav .nav-link:active {
+    transform: scale(1.15); /* enlarges slightly on click */
+}
