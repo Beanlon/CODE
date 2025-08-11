@@ -1,4 +1,4 @@
-html {
+﻿html {
     font-size: 14px;
 }
 
@@ -33,11 +33,21 @@ body {
 }
 
 /* ===== NAVBAR FIX ===== */
+header,
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+}
 .navbar-nav {
     display: flex;
     justify-content: center;
     flex: 1;
-    transform: translateX(-42px); /* moves nav items 10px to the left */
+    transform: translateX(-43px); /* moves nav items 10px to the left */
 }
 
 .navbar-nav .nav-item {
@@ -49,24 +59,26 @@ body {
     padding-bottom: 12px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
                  Roboto, Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    font-weight: 600; /* 'semibold' is invalid, use numeric weight */
-    transition: transform 0.15s ease-in-out;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.15s ease-in-out, border-bottom 0.15s ease-in-out;
+    border-bottom: 2px solid transparent; /* invisible by default */
+}
+
+.navbar-nav .nav-link:hover {
+    color: red !important; /* existing hover color */
+    border-bottom: 2px solid red; /* underline effect */
 }
 
 .navbar-nav .nav-link:hover,
-.navbar-brand:hover {
-    color: red !important; /* hover color */
-}
-
 .navbar-nav .nav-link:active {
-    transform: scale(1.15); /* click pop effect */
+    color: red !important; /* keep hover/click color */
+    border-bottom: 2px solid red; /* keep underline on click */
 }
-
 .navbar-logo {
     max-height: 40px;
 }
 
 .navbar {
-    min-height: 40px;
+    min-height: 42px;
 }
